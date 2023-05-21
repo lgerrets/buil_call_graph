@@ -1,0 +1,5 @@
+.vscode/
+env/
+
+graph_dot.png
+graph.dot
