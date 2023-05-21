@@ -1,5 +1,13 @@
-.\env\Scripts\python.exe .\lgrey\main.py -i .\lgrey\ -k def class -t py
+@echo off
 
-"C:\Program Files\Graphviz\bin\dot.exe" -Tpng .\graph.dot -o graph_dot.png
+set rootdir=%1
 
-call graph_dot.png
+.\env\Scripts\python.exe .\lgrey\main.py -i %rootdir%
+
+if %errorlevel% neq 0 exit /b %errorlevel%
+
+set output=graph_dot.png
+"C:\Program Files\Graphviz\bin\dot.exe" -Tpng .\graph.dot -o %output%
+if %errorlevel% neq 0 exit /b %errorlevel%
+
+call %output%

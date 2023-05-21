@@ -1,0 +1,11 @@
+{
+    "py": [
+        "def",
+        "class"
+    ],
+    "gd": [
+        "func",
+        "static func",
+        "class"
+    ]
+}
